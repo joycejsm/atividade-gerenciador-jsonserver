@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start:json-server": "if not exist public mkdir && json-server --watch db.json -- port 3000",
+    "prestart": "node createPublicDir.js",
+    "start:json-server": "json-server --watch db.json --port 3000",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
